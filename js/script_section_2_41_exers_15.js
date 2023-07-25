@@ -7,7 +7,7 @@ const restorantData = {
             price: '14$'
         },
         {
-            name: 'Pizza Diavola',
+            name: 'Pizza pizza',
             price: '9$'
         },
         {
