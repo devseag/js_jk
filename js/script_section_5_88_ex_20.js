@@ -46,6 +46,7 @@ function checkFilms(arr) {
 // console.log(arr);
 	// return arr.every(item => item.id === 0 || item.id ? true : false );
 	return arr.every(item => Object.hasOwn(item, 'id') );
+	// return arr.every(item => item.hasOwnProperty('id'));
 	// console.log(tranformedArray.every(item => item.id != 'undefined'));
 	// console.log(tranformedArray);	
 }
