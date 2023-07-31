@@ -1,18 +1,22 @@
-// import { one, two } from './main';
-// import { one as first } from './main';
+// import 'jquery';
+import $ from 'jquery';
 
-// console.log(first);
+// const btn = $('#btn');
+// console.log(btn);
 
-// console.log(`${one} and ${two}`);
+$(document).ready(function () {
+	$('.list-item:first').hover(function () {
+		$(this).toggleClass('active');
+	});
 
-// import * as data from './main';
-// console.log(`${data.one} and ${data.two}`);
-// data.sayHi();
+	$('.list-item:eq(2)').on('click', function () {
+		$('.image:even').fadeToggle('slow');
+	});
 
-import { one, two } from './main.js';
-// import sayHi from './main';
-// import { default as sayHi } from './main';
-import sayHi from './main.js';
-
-console.log(`${one} and ${two}`);
-sayHi();
+	$('.list-item:eq(4)').on('click', function () {
+		$('.image:odd').animate({
+			opacity: 'toggle',
+			height: 'toggle'
+		}, 3000);
+	});
+});

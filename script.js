@@ -1,30 +1,12 @@
 'use strict';
 
-// try {
-// 	console.log('Normal');
-// 	console.log(a);
-// 	console.log('result');
-// } catch (error) {
-// 	console.log(error);
-// 	console.log(error.name);
-// 	console.log(error.message);
-// 	console.log(error.stack);
-// 	console.log('error');
-// } finally {
-// 	console.log('finally');
-// }
+// yourScript.js
+// import { tns } from "./node_modules/tiny-slider/src/tiny-slider"
+import { tns } from "tiny-slider";
 
-// // console.log(a);
-// console.log('Still normal');
-
-
-try {
-	document.querySelector('.active').addEventListener('click', () => {
-		console.log('click');
-	});
-} catch (e) {
-	// console.log(e);
-}
-
-
-console.log('normal');
+tns({
+    container: '.my-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true
+  });
